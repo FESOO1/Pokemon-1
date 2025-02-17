@@ -42,7 +42,8 @@ function retrivingTheDataFromLocalStore() {
             })
             .catch(error => {
                 console.log(`The request was denied: ${error}`);
-            })
+                location.reload();
+            });
     };
 };
 
