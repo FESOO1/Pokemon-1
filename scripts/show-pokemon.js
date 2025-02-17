@@ -49,15 +49,21 @@ function retrivingTheDataFromLocalStore() {
 retrivingTheDataFromLocalStore();
 
 // PLAY THE SOUND
-playPokemonSound.addEventListener('click', () => pokemonAudio.play());
+playPokemonSound.addEventListener('click', e => {
+    e.stopImmediatePropagation();
+    pokemonAudio.play();
+});
 
 // ROTATING THE POKEMON
 pokemon.addEventListener('mousedown', e => {
     startPosY = e.clientY;
     startPosX = e.clientX;
 
+    pokemon.style.transition = 'transform 100ms';
+    pokemon.style.cursor = 'grabbing';
     document.addEventListener('mousemove', rotateThePokemonCard);
     document.addEventListener('mouseup', () => {
+        pokemon.style.transition = 'transform 500ms';
         pokemon.style.transform = `perspective(600px) rotateY(0deg) rotateX(0deg)`;
         document.removeEventListener('mousemove', rotateThePokemonCard)
     });
@@ -68,11 +74,4 @@ function rotateThePokemonCard(e) {
     newPosX = startPosX - e.clientX;
 
     pokemon.style.transform = `perspective(600px) rotateY(${newPosX}deg) rotateX(${newPosY}deg)`;
-
-    // SETTING BOUDARIES
-    /* if (newPosX < -50) {
-        document.removeEventListener('mousemove', rotateThePokemonCard)
-    } else if (newPosX > 50) {
-        document.removeEventListener('mousemove', rotateThePokemonCard)
-    }; */
 };

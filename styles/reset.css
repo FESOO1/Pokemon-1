@@ -4,6 +4,10 @@
     --f-all: "Monomakh", serif;
 }
 
+html {
+    user-select: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,6 +16,6 @@
 }
 
 body {
-    background-color: rgb(16,16,16);
+    /* background-color: rgb(16,16,16); */
     background: radial-gradient(circle at 50% 50%, rgb(25,25,25), rgb(5,5,5));
 }
