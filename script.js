@@ -2,6 +2,7 @@ const inputItself = document.querySelector('.input-itself');
 const inputButton = document.querySelector('.input-button');
 const outputContainer = document.querySelector('.output');
 const displayedPokemons = ['pikachu','charizard','bulbasaur','squirtle','jigglypuff','gengar','eevee','snorlax','lucario','rayquaza'];
+const notFoundMessage = document.querySelector('.not-found-message');
 
 // DISPLAY POKEMONS
 
@@ -81,7 +82,14 @@ function searchForAPokemon(e) {
         fetch(`https://pokeapi.co/api/v2/pokemon/${inputItself.value}`)
         .then(response => {
             if (!response.ok) {
-                throw new Error(response.status);
+                console.log(response.status);
+
+                if (response.status === 404) {
+                    outputContainer.innerHTML = '';
+                    notFoundMessage.textContent = 'Pokémon not found. Please try again!';
+                };
+            } else {
+                notFoundMessage.textContent = '';
             };
 
             return response.json();
@@ -118,6 +126,17 @@ function searchForAPokemon(e) {
         inputItself.style.border = '1px solid red';
     };
 };
+
+// INPUT 
+
+inputItself.addEventListener('input', () => {
+    if (inputItself.value.length === 0) {
+        notFoundMessage.textContent = '';
+        outputContainer.innerHTML = '';
+
+        displayPokemons();
+    };
+});
 
 // INITIALIZING
 inputButton.addEventListener('click', searchForAPokemon);

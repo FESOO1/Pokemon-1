@@ -29,6 +29,12 @@ body {
     column-gap: 10px;
 }
 
+.not-found-message {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
 /* INPUT ITSELF */
 
 .input-itself {
