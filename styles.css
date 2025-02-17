@@ -77,23 +77,32 @@ body {
 
 .output {
     padding: 20px;
+    padding-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 40px 20px;
 }
 
 /* OUTPUT ITSELF */
 
 .output-itself {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    background-color: rgb(40,40,40);
+    background-color: rgb(30,30,30);
     padding: 10px;
     border-radius: 1rem;
     border-top: 1px solid rgba(255,255,255,0.08);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.237);
 }
+
+.output-itself:hover {
+    background-color: rgb(35,35,35);
+}
+
+/* OUTPUT ITSELF */
 
 .output-itself-image {
     border-radius: 0.5rem;
