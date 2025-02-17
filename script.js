@@ -18,7 +18,6 @@ function displayPokemons() {
         })
         .then(pokemonData => {
             const pokemonName = pokemonData.name[0].toUpperCase() + pokemonData.name.slice(1);
-            const cryAudio = document.createElement('audio');
 
             outputContainer.innerHTML += `
                 <a title="${pokemonName}" href="./pages/pokemon-detailed-data.html" class="output-itself" data-pokemon-id="${pokemonData.id}">
@@ -68,8 +67,6 @@ function displayPokemons() {
             console.log(error);
         });
     };
-
-
 };
 
 window.addEventListener('DOMContentLoaded', displayPokemons);
