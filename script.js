@@ -1,7 +1,7 @@
 const inputItself = document.querySelector('.input-itself');
 const inputButton = document.querySelector('.input-button');
 const outputContainer = document.querySelector('.output');
-const displayedPokemons = ['pikachu','charizard','bulbasaur','squirtle','jigglypuff','gengar','eevee','snorlax','lucario','rayquaza'];
+const displayedPokemons = ['pikachu','charizard','mewtwo','rayquaza','lucario','greninja','arceus','garchomp','eevee','gengar'];
 const notFoundMessage = document.querySelector('.not-found-message');
 
 // DISPLAY POKEMONS
