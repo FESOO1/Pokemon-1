@@ -1,9 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+
+:root {
+    --f-all: "Monomakh", serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--f-all);
 }
 
 body {
     background-color: rgb(16,16,16);
+}
+
+/* 
+
+    INPUT
+
+*/
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 40px;
+    column-gap: 10px;
+}
+
+/* INPUT ITSELF */
+
+.input-itself {
+    width: 400px;
+    height: 40px;
+    padding-inline: 10px;
+    border-radius: 0.2rem;
+    border: 0;
+    font-size: 1rem;
+    background-color: rgb(25,25,25);
+    color: white;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.input-itself:focus {
+    background-color: rgb(30,30,30);
+}
+
+.input-button {
+    border: 0;
+    height: 40px;
+    border-radius: 0.2rem;
+    padding-inline: 12px;
+    background-color: rgb(35,35,35);
+    color: white;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+}
+
+.input-button:hover {
+    background-color: rgb(45,45,45);
+}
+
+.input-button:active {
+    background-color: rgb(40,40,40);
+}
+
+/*
+
+    OUTPUT
+
+*/
+
+.output {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px 20px;
+}
+
+/* OUTPUT ITSELF */
+
+.output-itself {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: rgb(40,40,40);
+    padding: 10px;
+    border-radius: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.output-itself-image {
+    border-radius: 0.5rem;
+    width: 100%;
+    line-height: 0;
+    background-color: rgb(20,20,20);
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.13);
+}
+
+.output-itself-image-itself {
+    width: 100%;
+}
+
+.output-itself-info {
+    
+}
+
+.output-itself-info-name {
+    color: white;
+    font-weight: 400;
+    text-align: center;
 }
