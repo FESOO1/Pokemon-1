@@ -77,11 +77,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
+    border: 0;
     background-color: rgb(70,70,70);
     width: 25px;
     height: 25px;
     cursor: pointer;
-    border: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .pokemon-info-cries-button-svg {
