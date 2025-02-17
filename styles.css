@@ -183,3 +183,22 @@ body {
 .output-itself-info-cries-button:active {
     background-color: rgb(60,60,60);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    .input {
+        padding-inline: 20px;
+    }
+    .input-itself {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .input {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+}
