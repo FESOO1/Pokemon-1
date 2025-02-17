@@ -53,6 +53,7 @@
     row-gap: 10px;
     position: relative;
     cursor: grab;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .pokemon::before {
