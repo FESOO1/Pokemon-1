@@ -62,6 +62,13 @@ function displayPokemons() {
                 outputCriesButton[i].addEventListener('click', () => {
                     outputCriesButtonAudio[i].play();
                 });
+
+                // SAVING THE ID OF A POKEMON THAT IS CLICKED
+                outputItself[i].addEventListener('click', () => {
+                    const pokemonId = outputItself[i].getAttribute('data-pokemon-id');
+
+                    localStorage.setItem('pokemonIdLS', pokemonId);
+                });
             };
         })
         .catch(error => {
