@@ -155,3 +155,11 @@
 .pokemon-info-cries-button:active {
     background-color: rgb(75,75,75);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 400px) {
+    .pokemon {
+        width: 80%;
+    }
+}
